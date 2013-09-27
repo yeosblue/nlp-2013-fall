@@ -3,11 +3,9 @@ def ngram(n, words):
         yield words[i:i+n]
 
 def getWords(filename):
-    words = []
+    from itertools import chain
     with open(filename) as f:
-        for line in f.readlines():
-            words += line.split()
-	return words
+    	return list(chain(*(line.split() for line in f.readlines())))
 
 def frequencyTop(top_n, words):
     from collections import Counter
