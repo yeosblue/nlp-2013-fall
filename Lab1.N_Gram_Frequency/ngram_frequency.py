@@ -10,11 +10,11 @@ def getWords(filename):
 	return words
 
 def frequencyTop(top_n, words):
-	from collections import Counter
-	return Counter(map(tuple, words)).most_common(top_n)
+    from collections import Counter
+    return Counter(map(tuple, words)).most_common(top_n)
 
 if __name__ == "__main__":
 
-	print frequencyTop(5, ngram(1, getWords("big-seg.txt")))
-	print frequencyTop(5, ngram(2, getWords("big-seg.txt")))
-	print frequencyTop(5, ngram(5, getWords("big-seg.txt")))
+    print frequencyTop(5, ngram(1, getWords("big-seg.txt")))
+    print frequencyTop(5, ngram(2, getWords("big-seg.txt")))
+    print frequencyTop(5, ngram(5, getWords("big-seg.txt")))
