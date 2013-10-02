@@ -1,11 +1,9 @@
 def ngram(n, words):
-    for i in xrange(len(words)-n+1):
-        yield words[i:i+n]
+	return (words[i:i+n] for i in xrange(len(words)-n+1))
 
 def getWords(filename):
-    from itertools import chain
     with open(filename) as f:
-    	return list(chain(*(line.split() for line in f.readlines())))
+    	return f.read().split()
 
 def frequencyTop(top_n, words):
     from collections import Counter
@@ -15,4 +13,3 @@ if __name__ == "__main__":
 
     for i in reversed(range(1, 6)):
         print frequencyTop(5, ngram(i, getWords("big-seg.txt")))
-    
