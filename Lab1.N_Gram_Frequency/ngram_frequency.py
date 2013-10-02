@@ -10,6 +10,6 @@ def frequencyTop(top_n, words):
     return Counter(map(tuple, words)).most_common(top_n)
 
 if __name__ == "__main__":
-
+    words = getWords("big-seg.txt")
     for i in reversed(range(1, 6)):
-        print frequencyTop(5, ngram(i, getWords("big-seg.txt")))
+        print frequencyTop(5, ngram(i, words))
