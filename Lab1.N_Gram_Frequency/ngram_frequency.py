@@ -13,6 +13,6 @@ def frequencyTop(top_n, words):
 
 if __name__ == "__main__":
 
-    print frequencyTop(5, ngram(1, getWords("big-seg.txt")))
-    print frequencyTop(5, ngram(2, getWords("big-seg.txt")))
-    print frequencyTop(5, ngram(5, getWords("big-seg.txt")))
+    for i in reversed(range(1, 6)):
+        print frequencyTop(5, ngram(i, getWords("big-seg.txt")))
+    
