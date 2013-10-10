@@ -1,5 +1,5 @@
 def ngram(n, words):
-	return (words[i:i+n] for i in xrange(len(words)-n+1))
+    return (words[i:i+n] for i in xrange(len(words)-n+1))
 
 def getWords(filename):
     with open(filename) as f:
