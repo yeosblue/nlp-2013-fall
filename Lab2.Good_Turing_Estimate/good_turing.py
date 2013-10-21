@@ -71,4 +71,3 @@ if __name__ == '__main__':
 	long_tail = [cond_prob(prob_2(models_2.get(tokens_2[i], 0)), prob_1(models_1.get(tokens_1[i], 0))) for i in range(len(tokens_2))]
 	print math.log10(prob_1(models_1.get(tokens_1[0], 0))) + sum(map(math.log10, long_tail))
 
-
